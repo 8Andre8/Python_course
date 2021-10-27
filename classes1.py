@@ -12,14 +12,12 @@ class CountVectorizer:
         self.lowercase = lowercase
         self.vocabulary = OrderedDict()
 
-    def _create_vocabulary(self, corpus: Iterable) -> None:
+    def _create_vocabulary(self, corpus: Iterable):
         """
         Создает/обновляет словарь слов с помощью Iterable объекта coprus, состоящего из строк.
         Запоминает его в виде атрибута vocabulary.
             Параметры:
                 corpus: Iterable объект, состоящий из строк.
-            Возвращаемое значение:
-                None.
         """
         self.vocabulary = OrderedDict()
         words_in_string_dict = OrderedDict()
@@ -39,7 +37,7 @@ class CountVectorizer:
             Возвращаемое значение:
                 document_matrix: терм-документная матрица в виде списка.
         """
-        document_matrix = list()
+        document_matrix = []
         for string in corpus:
             if self.lowercase:
                 split_string_list = string.lower().split()
@@ -89,6 +87,9 @@ if __name__ == '__main__':
     assert c.get_feature_names() == ['crock', 'pot', 'pasta', 'never', 'boil',
                                      'again', 'pomodoro', 'fresh', 'ingredients',
                                      'parmesan', 'to', 'taste'], c.get_feature_names()
+
+    print(c.get_feature_names())
+    print(c.fit_transform(corpus))
     # тест 2 - пример из задания + False lowercase
     c.lowercase = False
     count_matrix = c.fit_transform(corpus)
