@@ -63,6 +63,8 @@ class Advert(ColorMixin, BaseAdvert):
             else:
                 if key == 'price' and item < 0:
                     raise ValueError('price must be >= 0')
+                elif key == 'class':
+                    self.__setattr__('class_', item)
                 else:
                     self.__setattr__(key, item)
         if 'title' not in self.__dict__:
@@ -85,22 +87,22 @@ if __name__ == '__main__':
         """
     phone = json.loads(phone_str)
     a = Advert(phone)
-    assert a.title == "iPhone X", a.title
+    assert a.title == 'iPhone X', a.title
     assert a.price == 100, a.price
-    assert a.location.address == "город Самара, улица Мориса Тореза, 50", a.location.address
-    assert a.location.metro_stations == ["Спортивная", "Гагаринская"], a.location.metro_stations
-    print("Заголовок:", a.title)
-    print("Стоимость:", a.price)
-    print("Адрес:", a.location.address)
-    print("Станции метро:", a.location.metro_stations)
-    print("REPR:", a)
+    assert a.location.address == 'город Самара, улица Мориса Тореза, 50', a.location.address
+    assert a.location.metro_stations == ['Спортивная', 'Гагаринская'], a.location.metro_stations
+    print('Заголовок:', a.title)
+    print('Стоимость:', a.price)
+    print('Адрес:', a.location.address)
+    print('Станции метро:', a.location.metro_stations)
+    print('REPR:', a)
     print()
     # пример 2
     corgi_str = """
         {
             "title": "Вельш-корги",
             "price": 1000,
-            "category": "собаки",
+            "class": "собаки",
             "location": {
             "address": "сельское поселение Ельдигинское, поселок санатория Тишково, 25"
             }
@@ -108,26 +110,25 @@ if __name__ == '__main__':
         """
     corgi = json.loads(corgi_str)
     a2 = Advert(corgi)
-    assert a2.title == "Вельш-корги", a2.title
+    assert a2.title == 'Вельш-корги', a2.title
     assert a2.price == 1000, a2.price
-    assert a2.category == "собаки", a2.category
-    assert a2.location.address == "" \
-                                  "сельское поселение Ельдигинское, " \
-                                  "поселок санатория Тишково, 25", a2.location.address
-    print("Заголовок:", a2.title)
-    print("Цена:", a2.price)
-    print("Категория:", a2.category)
-    print("Адрес:", a2.location.address)
-    print("REPR:", a2)
+    assert a2.class_ == 'собаки', a2.class_
+    assert a2.location.address == 'сельское поселение Ельдигинское, ' \
+                                  'поселок санатория Тишково, 25', a2.location.address
+    print('Заголовок:', a2.title)
+    print('Цена:', a2.price)
+    print('Категория:', a2.class_)
+    print('Адрес:', a2.location.address)
+    print('REPR:', a2)
     a2.title = 'Вельш-Пельш-корги'
     a2.price *= 10
-    print("REPR после изменений:", a2)
+    print('REPR после изменений:', a2)
     print()
     # пример 3
     pipe_str = """
             {
                 "title": "Труба",
-                "category": "Железки",
+                "class": "Железки",
                 "location": {
                 "address": { 
                     "country": "Россия",
@@ -140,20 +141,19 @@ if __name__ == '__main__':
             """
     pipe = json.loads(pipe_str)
     a3 = Advert(pipe)
-    assert a3.title == "Труба", a3.title
+    assert a3.title == 'Труба', a3.title
     assert a3.price == 0, a3.price
-    assert a3.category == "Железки", a3.category
-    assert a3.location.address.country == "Россия", a3.location.address.country
-    assert a3.location.address.town == "Железноводск", a3.location.address.town
-    assert a3.location.address.street == "Железная", a3.location.address.street
+    assert a3.class_ == 'Железки', a3.class_
+    assert a3.location.address.country == 'Россия', a3.location.address.country
+    assert a3.location.address.town == 'Железноводск', a3.location.address.town
+    assert a3.location.address.street == 'Железная', a3.location.address.street
     assert a3.location.address.house == 26, a3.location.address.house
-    print("Заголовок:", a3.title)
-    print("Цена:", a3.price)
-    print("Категория:", a3.category)
-    print("Страна:", a3.location.address.country)
-    print("Город:", a3.location.address.town)
-    print("Улица:", a3.location.address.street)
-    print("Дом:", a3.location.address.house)
-    # print("Обращение к адресу целиком:", a3.location.address)
+    print('Заголовок:', a3.title)
+    print('Цена:', a3.price)
+    print('Категория:', a3.class_)
+    print('Страна:', a3.location.address.country)
+    print('Город:', a3.location.address.town)
+    print('Улица:', a3.location.address.street)
+    print('Дом:', a3.location.address.house)
     a3.change_color(32)
-    print("REPR:", a3)
+    print('REPR:', a3)
