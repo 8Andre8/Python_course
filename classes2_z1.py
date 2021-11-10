@@ -8,6 +8,7 @@ class AnimeMon:
             1. Абстрактное свойство exp, хранящее опыт монстра.
             2. Абстрактный метод inc_exp, увеличивающий опыт монстра.
     """
+
     @property
     @abstractmethod
     def exp(self):
@@ -29,6 +30,7 @@ class Pokemon(AnimeMon):
                 1. exp - возвращает опыт покемона как атрибут класса,
                 2. inc_exp - увеличивает опыт покемона по некоторой формуле.
     """
+
     def __init__(self, name: str, poketype: str, experience=0):
         self.name = name
         self.poketype = poketype
@@ -52,6 +54,7 @@ class Digimon(AnimeMon):
                 1. exp - возвращает опыт дигимона как атрибут класса,
                 2. inc_exp - увеличивает опыт дигимона по некоторой формуле.
     """
+
     def __init__(self, name: str, experience=0):
         self.name = name
         self.experience = experience
