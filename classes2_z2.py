@@ -7,7 +7,9 @@ class BaseAdvert:
         Атрибут:
             repr_color_code: задает цвет с помощью кода (33 - желтый)
     """
-    _repr_color_code = 33
+    repr_color_code = 33
+    title = None
+    price = 0
 
     def __repr__(self):
         if self.title is not None:
@@ -22,7 +24,7 @@ class ColorMixin:
     """
 
     def __repr__(self):
-        color = super()._repr_color_code
+        color = super().repr_color_code
         string_to_print = super().__repr__()
         return f'\033[1;{color};20m{string_to_print}\033[0m'
 
