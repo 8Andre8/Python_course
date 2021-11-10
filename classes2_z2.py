@@ -34,7 +34,6 @@ class ColorMixin:
 
     def __repr__(self):
         color = self.repr_color_code
-        print('color in mixin', color)
         string_to_print = super().__repr__()
         return f'\033[1;{color};20m{string_to_print}\033[0m'
 
