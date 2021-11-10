@@ -154,6 +154,6 @@ if __name__ == '__main__':
     print("Город:", a3.location.address.town)
     print("Улица:", a3.location.address.street)
     print("Дом:", a3.location.address.house)
-    #print("Обращение к адресу целиком:", a3.location.address)
+    # print("Обращение к адресу целиком:", a3.location.address)
     a3.change_color(32)
     print("REPR:", a3)
