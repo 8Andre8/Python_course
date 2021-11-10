@@ -9,7 +9,6 @@ class BaseAdvert:
             title: заголовок объявления,
             price: стоимость товара или услуги в объявлении.
     """
-    repr_color_code = 33
     title = None
     price = 0
 
@@ -23,10 +22,20 @@ class BaseAdvert:
 class ColorMixin:
     """
     Миĸсин для изменения цвета вывода Advert.__repr__
+    Атрибут:
+        repr_color_code: задает цвет с помощью кода (33 - желтый).
+    Методы:
+        change_color: задает цвет для вывода,
+        __repr__: выводит Advert.__repr__ с измененным цветом
     """
+    repr_color_code = 33
+
+    def change_color(self, color):
+        self.repr_color_code = color
 
     def __repr__(self):
-        color = super().repr_color_code
+        color = self.repr_color_code
+        print('color in mixin', color)
         string_to_print = super().__repr__()
         return f'\033[1;{color};20m{string_to_print}\033[0m'
 
@@ -148,4 +157,5 @@ if __name__ == '__main__':
     print("Улица:", a3.location.address.street)
     print("Дом:", a3.location.address.house)
     # print("Обращение к адресу целиком:", a3.location.address)
+    a3.change_color(32)
     print("REPR:", a3)
