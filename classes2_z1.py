@@ -64,7 +64,7 @@ class Digimon(AnimeMon):
         self.experience += value * 8
 
 
-def train(mon: AnimeMon) -> AnimeMon:
+def train(mon: AnimeMon):
     """
     Проводит однократную тренировку аниме-монстра
         Параметр:
@@ -87,4 +87,5 @@ if __name__ == '__main__':
     agumon = Digimon(name='Agumon')
     train(agumon)
     print(f'Опыт покемона {agumon.name}: {agumon.exp}')
+    print(bulbasaur.__dict__)
     print(agumon.__dict__)
