@@ -6,6 +6,8 @@ class BaseAdvert:
     Базовый класс необходимый для изменения вывода Advert.__repr__
         Атрибут:
             repr_color_code: задает цвет с помощью кода (33 - желтый)
+            title: заголовок обявления
+            price: цена в объявлении
     """
     repr_color_code = 33
     title = None
