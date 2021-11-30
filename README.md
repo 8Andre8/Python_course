@@ -1,6 +1,7 @@
 # Python_course
 1. doctest
-  - ytj,ldf
+Необходимо:
+  - ytj
   - dsf
   - sd
 2. pytest.mark.parametrize
