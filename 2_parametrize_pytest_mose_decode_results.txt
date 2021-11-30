@@ -1,0 +1,14 @@
+PS D:\Avito\Python\ДЗ\5 - тесты> python -m pytest -rp test_morse_decode.py
+================================================================================== test session starts ===================================================================================
+platform win32 -- Python 3.7.6, pytest-5.3.5, py-1.8.1, pluggy-0.13.1
+rootdir: D:\Avito\Python\ДЗ\5 - тесты
+plugins: hypothesis-5.5.4, arraydiff-0.3, astropy-header-0.1.2, cov-3.0.0, doctestplus-0.5.0, openfiles-0.4.0, remotedata-0.3.2
+collected 3 items                                                                                                                                                                         
+
+test_morse_decode.py ...                                                                                                                                                            [100%]
+
+================================================================================ short test summary info =================================================================================
+PASSED test_morse_decode.py::test_morse_decode[... --- ...-SOS]
+PASSED test_morse_decode.py::test_morse_decode[.- .- .--AAA]
+PASSED test_morse_decode.py::test_morse_decode[-]
+=================================================================================== 3 passed in 0.04s ====================================================================================

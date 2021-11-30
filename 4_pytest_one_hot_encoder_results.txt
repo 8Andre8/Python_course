@@ -1,0 +1,17 @@
+PS D:\Avito\Python\ДЗ\5 - тесты\pytest_one_hot> python -m pytest -rp
+================================================================================== test session starts ===================================================================================
+platform win32 -- Python 3.7.6, pytest-5.3.5, py-1.8.1, pluggy-0.13.1
+rootdir: D:\Avito\Python\ДЗ\5 - тесты\pytest_one_hot
+plugins: hypothesis-5.5.4, arraydiff-0.3, astropy-header-0.1.2, cov-3.0.0, doctestplus-0.5.0, openfiles-0.4.0, remotedata-0.3.2
+collected 6 items                                                                                                                                                                         
+
+test_one_hot_encoder_pytest.py ......                                                                                                                                               [100%]
+
+================================================================================ short test summary info =================================================================================
+PASSED test_one_hot_encoder_pytest.py::test_standard
+PASSED test_one_hot_encoder_pytest.py::test_from_example
+PASSED test_one_hot_encoder_pytest.py::test_eq
+PASSED test_one_hot_encoder_pytest.py::test_not_eq
+PASSED test_one_hot_encoder_pytest.py::test_empty_input
+PASSED test_one_hot_encoder_pytest.py::test_not_iterable
+=================================================================================== 6 passed in 0.04s ====================================================================================

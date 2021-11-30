@@ -38,6 +38,3 @@ if __name__ == '__main__':
     transformed_cities = fit_transform(cities)
     pprint(transformed_cities)
     assert transformed_cities == exp_transformed_cities
-    pprint(fit_transform(''))
-    a = True
-    pprint(fit_transform(768))

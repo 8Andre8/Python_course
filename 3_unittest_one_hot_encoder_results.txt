@@ -1,0 +1,12 @@
+PS D:\Avito\Python\ДЗ\5 - тесты> python -m unittest -v
+test_empty_input (test_one_hot_encoder_unit.TestOneHot) ... ok
+test_eq (test_one_hot_encoder_unit.TestOneHot) ... ok
+test_from_example (test_one_hot_encoder_unit.TestOneHot) ... ok
+test_not_eq (test_one_hot_encoder_unit.TestOneHot) ... ok
+test_not_iterable (test_one_hot_encoder_unit.TestOneHot) ... ok
+test_standard (test_one_hot_encoder_unit.TestOneHot) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+OK

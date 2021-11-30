@@ -1,0 +1,20 @@
+PS D:\Avito\Python\ДЗ\5 - тесты> python -m doctest -o NORMALIZE_WHITESPACE morse.py
+**********************************************************************
+File "D:\Avito\Python\ДЗ\5 - тесты\morse.py", line 44, in morse.encode
+Failed example:
+    encode('aaa')
+Exception raised:
+    Traceback (most recent call last):
+      File "C:\Users\TEMP\anaconda3\lib\doctest.py", line 1329, in __run
+        compileflags, 1), test.globs)
+      File "<doctest morse.encode[6]>", line 1, in <module>
+        encode('aaa')
+      File "D:\Avito\Python\ДЗ\5 - тесты\morse.py", line 48, in encode
+        LETTER_TO_MORSE[letter] for letter in message
+      File "D:\Avito\Python\ДЗ\5 - тесты\morse.py", line 48, in <listcomp>
+        LETTER_TO_MORSE[letter] for letter in message
+    KeyError: 'a'
+**********************************************************************
+1 items had failures:
+   1 of   7 in morse.encode
+***Test Failed*** 1 failures.

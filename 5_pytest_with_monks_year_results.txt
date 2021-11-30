@@ -1,0 +1,18 @@
+PS D:\Avito\Python\ДЗ\5 - тесты\pytest_year> python -m pytest -rp --cov --cov-report html
+================================================================================== test session starts ===================================================================================
+platform win32 -- Python 3.7.6, pytest-5.3.5, py-1.8.1, pluggy-0.13.1
+rootdir: D:\Avito\Python\ДЗ\5 - тесты\pytest_year
+plugins: hypothesis-5.5.4, arraydiff-0.3, astropy-header-0.1.2, cov-3.0.0, doctestplus-0.5.0, openfiles-0.4.0, remotedata-0.3.2
+collected 3 items                                                                                                                                                                         
+
+test_year_pytest.py ...                                                                                                                                                             [100%]
+
+----------- coverage: platform win32, python 3.7.6-final-0 -----------
+Coverage HTML written to dir htmlcov
+
+
+================================================================================ short test summary info =================================================================================
+PASSED test_year_pytest.py::test_YMD_with_mock
+PASSED test_year_pytest.py::test_DMY_with_mock
+PASSED test_year_pytest.py::test_exception_with_mock
+=================================================================================== 3 passed in 0.26s ====================================================================================

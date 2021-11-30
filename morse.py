@@ -32,7 +32,7 @@ def encode(message: str) -> str:
     >>> encode('AAA')
     '.- .- .-'
     >>> encode('A' * 30) # doctest: +ELLIPSIS
-    '.- ...  .-'
+    '.- ... .-'
     >>> encode('')
     ''
     >>> encode(42)
@@ -68,5 +68,3 @@ if __name__ == '__main__':
     decoded_msg = decode(morse_msg)
     print(decoded_msg)
     assert morse_msg == encode(decoded_msg)
-    print(encode('SOS'))
-    encode(42)

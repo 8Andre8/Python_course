@@ -22,9 +22,7 @@ def what_is_year_now() -> int:
     """
     with urllib.request.urlopen(API_URL) as resp:
         resp_json = json.load(resp)
-        print(resp)
 
-    print(resp_json)
     datetime_str = resp_json['currentDateTime']
     if datetime_str[YMD_SEP_INDEX] == YMD_SEP:
         year_str = datetime_str[YMD_YEAR_SLICE]
