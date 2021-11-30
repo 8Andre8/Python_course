@@ -29,7 +29,8 @@ def encode(message: str) -> str:
     Кодирует строку в соответсвие с таблицей азбуки Морзе
     >>> encode('SOS')
     '... --- ...'
-    >>> encode('AAA')
+    >>> encode('AA\
+    A')
     '.- .- .-'
     >>> encode('A' * 30) # doctest: +ELLIPSIS
     '.- ... .-'
