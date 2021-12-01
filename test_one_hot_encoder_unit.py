@@ -61,7 +61,7 @@ class TestOneHot(unittest.TestCase):
         """
         Тест с 0 числом аргументов (перехват исключения - assertRaises)
         """
-        with self.assertRaises(Exception):
+        with self.assertRaises(TypeError):
             fit_transform()
 
     def test_not_iterable(self):

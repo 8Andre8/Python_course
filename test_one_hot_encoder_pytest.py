@@ -52,7 +52,7 @@ def test_empty_input():
     """
     Тест с 0 числом аргументов (перехват исключения - assertRaises)
     """
-    with pytest.raises(Exception):
+    with pytest.raises(TypeError):
         fit_transform()
 
 
