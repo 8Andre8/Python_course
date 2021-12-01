@@ -1,3 +1,41 @@
+PS D:\Avito\Python\ДЗ\5 - тесты> python -m doctest -o NORMALIZE_WHITESPACE morse.py -v
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('AA    A')
+Expecting:
+    '.- .- .-'
+ok
+Trying:
+    encode('A' * 30) # doctest: +ELLIPSIS
+Expecting:
+    '.- ... .-'
+ok
+Trying:
+    encode('')
+Expecting:
+    ''
+ok
+Trying:
+    encode(42)
+Expecting:
+    Traceback (most recent call last):
+    TypeError: 'int' object is not iterable
+ok
+Trying:
+    encode()
+Expecting:
+    Traceback (most recent call last):
+    TypeError: encode() missing 1 required positional argument: 'message'
+ok
+Trying:
+    encode('aaa')
+Expecting:
+    '.- .- .-'
+**********************************************************************
 File "D:\Avito\Python\ДЗ\5 - тесты\morse.py", line 44, in morse.encode
 Failed example:
     encode('aaa')
@@ -7,9 +45,9 @@ Exception raised:
         compileflags, 1), test.globs)
       File "<doctest morse.encode[6]>", line 1, in <module>
         encode('aaa')
-      File "D:\Avito\Python\ДЗ\5 - тесты\morse.py", line 48, in encode
+      File "D:\Avito\Python\ДЗ\5 - тесты\morse.py", line 49, in encode
         LETTER_TO_MORSE[letter] for letter in message
-      File "D:\Avito\Python\ДЗ\5 - тесты\morse.py", line 48, in <listcomp>
+      File "D:\Avito\Python\ДЗ\5 - тесты\morse.py", line 49, in <listcomp>
         LETTER_TO_MORSE[letter] for letter in message
     KeyError: 'a'
 2 items had no tests:
