@@ -32,7 +32,8 @@ class RGBColor(ComputerColor):
         """
         Выводит цветную точку.
         """
-        return f'{self.START};{self.red};{self.green};{self.blue}{self.MOD}●{self.END}{self.MOD}'
+        return f'{self.START};{self.red};{self.green};' \
+               f'{self.blue}{self.MOD}●{self.END}{self.MOD}'
 
     def __eq__(self, other) -> bool:
         """
@@ -59,7 +60,8 @@ class RGBColor(ComputerColor):
         """
         Выводит точку (●) соответствующего цвета.
         """
-        return f'{self.START};{self.red};{self.green};{self.blue}{self.MOD}●{self.END}{self.MOD}'
+        return f'{self.START};{self.red};{self.green};' \
+               f'{self.blue}{self.MOD}●{self.END}{self.MOD}'
 
     def _change_contrast(self, current_contrast: float, c: float):
         """
@@ -109,7 +111,8 @@ class HSLColor(ComputerColor):
         """
         Выводит точку (●) черного цвета.
         """
-        return f'{self.START};{self.red};{self.green};{self.blue}{self.MOD}●{self.END}{self.MOD}'
+        return f'{self.START};{self.red};{self.green};' \
+               f'{self.blue}{self.MOD}●{self.END}{self.MOD}'
 
     def _change_contrast(self, current_contrast: float, c: float) -> int:
         """
